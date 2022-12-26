@@ -1,2 +1,4 @@
 #pragma once
-//Через него подключаем наши cpp  
+#include <iostream>
+
+void watch();
