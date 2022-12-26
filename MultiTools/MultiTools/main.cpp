@@ -5,5 +5,5 @@
 
 using namespace std;
 int main() {
-	watch();
+	watch(); // часы
 }
