@@ -9,4 +9,5 @@ using namespace std;
 int main() {
 	watch(); // часы
 	getCalculator(); // калькулятор, но 2 функции вместе не работают 
+	Schedule(); // расписание
 }
