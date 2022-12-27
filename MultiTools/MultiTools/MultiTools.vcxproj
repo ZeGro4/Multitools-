@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Calculator.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Schedule.cpp" />
     <ClCompile Include="Watch.cpp" />
   </ItemGroup>
   <ItemGroup>
