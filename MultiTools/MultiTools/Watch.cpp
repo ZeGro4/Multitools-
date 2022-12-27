@@ -7,25 +7,38 @@ using namespace std;
 
 void watch() {
 	setlocale(LC_CTYPE, "Russian");
-	SYSTEMTIME st;
+	int answer, e = 1;
+	cout << "Желаете получить актуальное время? (Y/N)" << endl;
+		cin >> answer;
+		switch(answer){
+		case 1:
+	SYSTEMTIME getTime;
 	while (true) {
-		GetLocalTime(&st);
-		if (st.wMinute < 10 && st.wSecond < 10) {
-			cout << st.wHour << ":" << "0" << st.wMinute << ":" << "0" << st.wSecond;
+		GetLocalTime(&getTime);
+		if (getTime.wMinute < 10 && getTime.wSecond < 10) {
+			cout << getTime.wHour << ":" << "0" << getTime.wMinute << ":" << "0" << getTime.wSecond;
 		}
-		else if (st.wMinute < 10 && st.wSecond > 10) {
-			cout << st.wHour << ":" << "0" << st.wMinute << ":" << st.wSecond;
+		else if (getTime.wMinute < 10 && getTime.wSecond > 10) {
+			cout << getTime.wHour << ":" << "0" << getTime.wMinute << ":" << getTime.wSecond;
 		}
-		else if (st.wMinute > 10 && st.wSecond < 10) {
-			cout << st.wHour << ":" << st.wMinute << ":" << "0" << st.wSecond;
+		else if (getTime.wMinute > 10 && getTime.wSecond < 10) {
+			cout << getTime.wHour << ":" << getTime.wMinute << ":" << "0" << getTime.wSecond;
 		}
 		else {
-			cout << st.wHour << ":" << st.wMinute << ":" << st.wSecond;
+			cout << getTime.wHour << ":" << getTime.wMinute << ":" << getTime.wSecond;
 		}
 		Sleep(1000);
 		system("cls");
-
 	}
+			break;
+		case 2:
+		
+			cout << "С наступающим вас новым годом!!!" << endl;
+			break;
+		default:
+		
+			cout << "Ну как хотите(" << endl;
+		}
 
 }
 
