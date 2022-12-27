@@ -7,38 +7,48 @@ using namespace std;
 
 void watch() {
 	setlocale(LC_CTYPE, "Russian");
-	int answer, e = 1;
-	cout << "Желаете получить актуальное время? (Y/N)" << endl;
-		cin >> answer;
-		switch(answer){
-		case 1:
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	string ex;
+		
 	SYSTEMTIME getTime;
 	while (true) {
 		GetLocalTime(&getTime);
 		if (getTime.wMinute < 10 && getTime.wSecond < 10) {
 			cout << getTime.wHour << ":" << "0" << getTime.wMinute << ":" << "0" << getTime.wSecond;
+			cout << "\n";
+			cin >> ex;
+			if (ex == "exit") {
+				break;
+			}
 		}
 		else if (getTime.wMinute < 10 && getTime.wSecond > 10) {
 			cout << getTime.wHour << ":" << "0" << getTime.wMinute << ":" << getTime.wSecond;
+			cout << "\n";
+			cin >> ex;
+			if (ex == "exit") {
+				break;
+			}
 		}
 		else if (getTime.wMinute > 10 && getTime.wSecond < 10) {
 			cout << getTime.wHour << ":" << getTime.wMinute << ":" << "0" << getTime.wSecond;
+			cout << "\n";
+			cin >> ex;
+			if (ex == "exit") {
+				break;
+			}
 		}
 		else {
 			cout << getTime.wHour << ":" << getTime.wMinute << ":" << getTime.wSecond;
+			cout << "\n";
+			cin >> ex;
+			if (ex == "exit") {
+				break;
+			}
 		}
 		Sleep(1000);
 		system("cls");
 	}
-			break;
-		case 2:
-		
-			cout << "С наступающим вас новым годом!!!" << endl;
-			break;
-		default:
-		
-			cout << "Ну как хотите(" << endl;
-		}
 
 }
 

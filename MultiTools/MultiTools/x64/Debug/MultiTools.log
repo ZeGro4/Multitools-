@@ -1,4 +1,4 @@
-﻿Сборка начата 27.12.2022 15:28:00.
+﻿Сборка начата 27.12.2022 15:48:31.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\User\Desktop\ghj\Multitools-\MultiTools\MultiTools\MultiTools.vcxproj" в узле 2 (целевые объекты Build).
      1>InitializeBuildStatus:
          Создание "x64\Debug\MultiTools.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
@@ -20,4 +20,4 @@
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:01.97
+Прошло времени 00:00:01.86
